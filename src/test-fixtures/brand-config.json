@@ -1,0 +1,57 @@
+{
+  "brandName": "Test Co",
+  "registers": [
+    {
+      "name": "advisor",
+      "label": "The Advisor",
+      "voiceInstructions": "Calm, second-person, measured.",
+      "markers": ["case study:"],
+      "domainPatterns": []
+    },
+    {
+      "name": "spark",
+      "label": "Spark Club",
+      "voiceInstructions": "High energy, all-caps allowed.",
+      "markers": ["LET'S GOOOO"],
+      "domainPatterns": ["testsparkclub.example.com"]
+    }
+  ],
+  "hardRules": ["No em dashes.", "No shame language."],
+  "contentPattern": ["Open with a scenario", "State the pivot", "Name the fix"],
+  "emailBlockOrder": ["Header", "Hero", "Body", "Emphasis", "Pull-quote", "CTA", "Signoff", "P.S.", "Footer"],
+  "namedFrameworks": [
+    {
+      "name": "The Focus Triangle",
+      "requiredSlots": [["priority"], ["boundary"], ["review"]],
+      "minSlotsMatched": 3
+    },
+    {
+      "name": "The Momentum Loop",
+      "requiredSlots": [["plan"], ["act"], ["reflect"], ["adjust"]],
+      "minSlotsMatched": 2
+    }
+  ],
+  "bannedPhrases": [{ "phrase": "touch base", "replacement": "quick check-in" }],
+  "confirmedMergeTokens": ["{{contact.first_name}}", "{{email.unsubscribe_link}}"],
+  "fromIdentity": {
+    "name": "Test Co Team",
+    "address": "hello@testco.example.com",
+    "replyTo": "hello@testco.example.com"
+  },
+  "signoffName": "The Test Co Team",
+  "emailDesignSystem": {
+    "palette": {
+      "background": "#f7f5f2",
+      "primary": "#22303c",
+      "accent": "#3f6b5c",
+      "secondary": "#9fb4ab",
+      "emphasis": "#c98a3e"
+    },
+    "headingFont": "Georgia, serif",
+    "bodyFont": "Arial, sans-serif",
+    "logoUrl": "https://example.com/logo.png",
+    "logoAlt": "Test Co",
+    "defaultCtaLabel": "Get Started",
+    "footerNote": "You're receiving this because you subscribed to Test Co updates."
+  }
+}

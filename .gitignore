@@ -1,0 +1,19 @@
+node_modules/
+dist/
+coverage/
+*.log
+.env
+.env.*
+!.env.example
+
+# Per-client brand pack -- never committed to the template; lives only in
+# each client's own repo instantiated from this template.
+/BRAND-GUIDE.md
+/brand-voice-pack.md
+/src/config/brand-config.json
+
+# Generated at runtime; not template content.
+/campaigns/
+/social/*.json
+/social/images/
+/email/push-manifest-*.json

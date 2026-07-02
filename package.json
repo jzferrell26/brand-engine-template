@@ -1,0 +1,30 @@
+{
+  "name": "brand-engine-template",
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Reusable, approval-gated content engine: brief -> LLM generation -> brand preflight -> GHL delivery. Brand-agnostic; every client supplies its own brand pack (BRAND-GUIDE.md, brand-voice-pack.md, brand-config.json).",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "dup": "jscpd src --min-lines 10 --min-tokens 60",
+    "ci": "npm run typecheck && npm run test && npm run dup"
+  },
+  "dependencies": {
+    "@ai-sdk/anthropic": "^4.0.1",
+    "ai": "^7.0.4",
+    "zod": "^3.24.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.9",
+    "jscpd": "^4.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.7.0",
+    "vitest": "^4.1.9"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "_comment": "Fully worked FICTITIOUS example (not a real client). Copy to brand-config.json and replace every value for the real client. Validated against src/config/brand-config.ts BrandConfigSchema.",
+  "brandName": "Acme Co",
+  "registers": [
+    {
+      "name": "advisor",
+      "label": "The Advisor",
+      "voiceInstructions": "Second-person, measured, warm authority. Short client-story examples. Calm, never hypey. This is the default register for acme.com, the newsletter, and webinars.",
+      "markers": ["case study:", "let's walk through this together"],
+      "domainPatterns": []
+    },
+    {
+      "name": "spark",
+      "label": "Spark Club",
+      "voiceInstructions": "High-energy, all-caps allowed for emphasis, confrontational-compassion tone. Community-brand only (Spark Club). Never bleeds into Advisor sends.",
+      "markers": ["LET'S GOOOO", "no more excuses"],
+      "domainPatterns": ["acmesparkclub.com"]
+    }
+  ],
+  "hardRules": [
+    "ZERO em dashes (U+2014) or en dashes (U+2013). Use commas, colons, parentheses, periods, semicolons.",
+    "No shame language -- never tell the reader they are lazy or the problem; the system is missing.",
+    "No hype, no false scarcity, no ALL-CAPS subject lines.",
+    "No unconfirmed merge tokens beyond the confirmed list.",
+    "Every email MUST include {{physical_address}} and {{email.unsubscribe_link}} in the body."
+  ],
+  "contentPattern": [
+    "Open with a relatable scenario or rhetorical question the reader is quietly living",
+    "The pivot line: \"Here's the real issue.\"",
+    "The reframe itself: one short punchy line",
+    "Name the framework / the fix (a system, not willpower)",
+    "One clear next step with honest urgency",
+    "Sign off as the brand",
+    "Reinforce with a P.S."
+  ],
+  "emailBlockOrder": [
+    "HEADER: logo only",
+    "HERO: small uppercase eyebrow label, serif headline with one emphasis span wrapped in <em>...</em>, one-sentence sub",
+    "BODY: 2-3 paragraphs, opening in second person, includes the pivot line as its own line",
+    "EMPHASIS BLOCK: the reframe as a standalone punchy line",
+    "PULL-QUOTE: one short quotable line, attributed to the brand",
+    "CTA: one paragraph of honest urgency, then a button",
+    "SIGNOFF",
+    "P.S.: one reinforcing nudge",
+    "FOOTER: must include {{email.unsubscribe_link}} and {{physical_address}}"
+  ],
+  "namedFrameworks": [
+    {
+      "name": "The Focus Triangle",
+      "requiredSlots": [["priority"], ["boundary"], ["review"]],
+      "minSlotsMatched": 3
+    },
+    {
+      "name": "The Momentum Loop",
+      "requiredSlots": [["plan"], ["act"], ["reflect"], ["adjust"]],
+      "minSlotsMatched": 2
+    }
+  ],
+  "bannedPhrases": [
+    { "phrase": "touch base", "replacement": "quick check-in" },
+    { "phrase": "synergy", "replacement": "a plan that actually works together" }
+  ],
+  "confirmedMergeTokens": ["{{contact.first_name}}", "{{email.unsubscribe_link}}"],
+  "fromIdentity": {
+    "name": "Acme Co Team",
+    "address": "hello@acmeco.example.com",
+    "replyTo": "hello@acmeco.example.com"
+  },
+  "signoffName": "The Acme Co Team",
+  "emailDesignSystem": {
+    "palette": {
+      "background": "#f7f5f2",
+      "primary": "#22303c",
+      "accent": "#3f6b5c",
+      "secondary": "#9fb4ab",
+      "emphasis": "#c98a3e"
+    },
+    "headingFont": "Georgia, serif",
+    "bodyFont": "'Helvetica Neue', Arial, sans-serif",
+    "logoUrl": "https://example.com/acme-logo.png",
+    "logoAlt": "Acme Co",
+    "defaultCtaLabel": "Get Started",
+    "footerNote": "You're receiving this because you subscribed to Acme Co updates."
+  }
+}
