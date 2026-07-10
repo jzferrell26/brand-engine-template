@@ -8,6 +8,10 @@ This repo is a **template**, not a client. It contains the reusable engine (`src
 
 Originally extracted from a single-client build (Heather Ferrari's brand engine); genericized so a new client never means editing `src/`.
 
+## For the Notorious Avengers
+
+Shared with the Notorious Avengers Group, my crew of dev friends. Take it, run it, break it, make it yours. Clone it or hit "Use this template" to spin up your own copy, then build your own client engines on top. Everything shipped here is fictitious example content, so there is nothing to scrub before you start. Ping me if anything is unclear.
+
 ## The split: engine vs. brand pack
 
 | | Lives in | Per-client? |
